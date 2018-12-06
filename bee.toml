@@ -1,0 +1,25 @@
+[worker]
+thread = 2
+
+[source]
+servers = ["127.0.0.1:6379", "127.0.0.1:6378"]
+
+[target]
+# set hash tag for distribution
+hash_tag = "{}"
+
+# servers maybe the server address, for rdb/aof file, this will be file paths
+# but target can't be rdb/aof file now(will be supported as soon as possible)
+servers = ["127.0.0.1:16379:20 alias2", "127.0.0.1:3479:10 alias1"]
+
+# support kind as :
+#     redis-cluster | single | ketama (compitable with twemproxy) | rdb | aof
+#
+
+kind = "redis-cluster"
+
+# support crc method list is:
+#     md5 | crc16 | crc32 | crc32a | fnv1_64 | fnv1a_64 | fnv1_32 | fnv1a_32 | hsieh | hsieh | murmur | jenkins
+# for kind is "redis-cluster" , the hash method will be ignore
+
+hash = "crc16"

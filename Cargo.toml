@@ -1,0 +1,21 @@
+[package]
+name = "treenewbee"
+version = "0.1.0"
+authors = ["wayslog <zxs867179@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name="bee"
+path="bin/bee.rs"
+
+[lib]
+name="libtreenewbee"
+path="src/lib.rs"
+
+[dependencies]
+redis = "0.9.1"
+toml = "0.4"
+serde_derive = "1.0"
+serde = "1.0"
+log="0.4"
+env_logger="0.6"
