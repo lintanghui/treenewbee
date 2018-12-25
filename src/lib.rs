@@ -1,5 +1,11 @@
 #[macro_use]
 extern crate log;
+#[macro_use] extern crate failure;
+
+mod protocol;
+mod com;
+
+// use self::protocol::rdb::RDBParser;
 
 use serde;
 use serde_derive::{Deserialize, Serialize};
