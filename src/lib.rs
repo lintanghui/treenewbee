@@ -4,6 +4,7 @@ extern crate log;
 
 mod protocol;
 mod com;
+mod formatter;
 
 // use self::protocol::rdb::RDBParser;
 
